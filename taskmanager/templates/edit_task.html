@@ -19,7 +19,7 @@
             <select id="category_id" name="category_id" required>
                 {% for category in categories %}
                 <option value="{{ category.id }}" {% if category.id == task.category_id %}selected{% endif %}>
-                    {{ category.category_name }}
+                    {{- category.category_name -}}
                 </option>
                 {% endfor %}
             </select>
