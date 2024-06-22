@@ -5,7 +5,7 @@
 
 <div class="row">
     <div class="col s12 center-align">
-        <a href="{{ url_for('add_category') }}" class="btn-large light-blue darken-2">
+        <a href="{{ url_for('add_category') }}" class="btn-large teal darken-2">
             Add Category <div class="fas fa-plus-square right"></div> 
         </a>
     </div>
@@ -14,13 +14,13 @@
 <div class="row">
     {% for category in categories %}
     <div class="col s12 m6 l3">
-      <div class="card indigo darken-4 center-align">
+      <div class="card teal lighten-5 center-align">
         <div class="card-content white-text">
           <span class="card-title">{{ category.category_name }}</span>
         </div>
         <div class="card-action">
-          <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn green accent-4">Edit</a>
-          <a href="{{  url_for('delete_category', category_id=category.id) }}" class="btn red">Delete</a>
+          <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn-small teal light-2">Edit</a>
+          <a href="{{  url_for('delete_category', category_id=category.id) }}" class="btn red lighten-2" onclick="return confirmDelete('category')">Delete</a>
         </div>
       </div>
     </div>
